@@ -8,20 +8,39 @@ function changeMe(text, color, size){
 
 /*OPPGAVE 2*/
 
-function changeBackground(color){
-    document.getElementById("secondId").innerHTML = /*HTML*/`
-    <div style="background-color:${color};"></div> 
-    `;
+let testList = [1, 2, 3, 4];
+
+function goThroughList() {
+    for (let item of testList) {
+        console.log(item);
+    };
+};
+
+let colorChange;
+
+function changeBody(){
+    document.body.style.backgroundColor = colorChange;
 }
 
-function changeBackground(color){
-    document.getElementById("thirdId").innerHTML = /*HTML*/`
-    <div style="background-color:${color};"></div> 
-    `;
+function setColor(element, color){
+    console.log("colorChange before function: ", colorChange);
+    for (let child of element.parentElement.children) {
+        child.classList.remove("border");
+    };
+    element.classList.add('border');
+    colorChange = color;
+    console.log("colorChange after function: ", colorChange);
+};
+
+function changeBox(element){
+    element.style.backgroundColor = colorChange
 }
 
-function changeBackground(color){
-    document.getElementById("fourthId").innerHTML = /*HTML*/`
-    <div style="background-color:${color};"></div> 
-    `;
-}
+function changeAllDivs(element) {
+    let number = 0;
+    let incrementBy = 10;
+    for (let child of element.children) {
+        child.textContent = number;
+        number += incrementBy;
+    };
+};

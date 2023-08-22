@@ -14,13 +14,33 @@
     <button class="knapp2" onclick="changeMe('Vi sees igjen', 'lightblue', '100')">PRØV MEG OGSÅ!</button>
     
     <!--OPPGAVE 2-->
-    
-    <div id="secondId" onclick="changeBackground('red')">Rød</div>
-    <div id="thirdId" onclick="changeBackground('blue')">Blå</div>
-    <div id="fourthId" onclick="changeBackground('yellow')">Gul</div>
+    <div id="secondDiv">
+        <div id="red" onclick="setColor(this, 'red')">Rød</div>
+        <div id="blue" onclick="setColor(this, 'blue')">Blå</div>
+        <div id="yellow" onclick="setColor(this, 'yellow')">Gul</div>
+    </div>
+    <div class="emptyBox" onclick="changeBox(this)"></div>
+    <div class="emptyBox" onclick="changeBox(this)"></div>
 
-        <!--<button onclick="changeBackground('red', 'blue', 'yellow')">Bytt bakgrunn</button>-->
-    
+    <button onclick="changeBody()">Bytt bakgrunn</button>
+    <button id="fifteenDivs" onclick="changeAllDivs(this)">
+        TEST NUMBERS
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
     <script src="script.js"></script>
 </body>
 </html>
